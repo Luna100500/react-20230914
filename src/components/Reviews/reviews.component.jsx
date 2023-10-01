@@ -1,4 +1,4 @@
-import { Review } from "../Review/component"
+import { Review } from "../Review/review.component"
 
 export const Reviews = ({ reviews }) => {
 

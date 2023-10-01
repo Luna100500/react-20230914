@@ -1,0 +1,16 @@
+.navigationButton {
+    padding: 20px 40px;
+    margin: 10px;
+    background-color: #A3438E;
+    box-shadow: 3px 3px #D18EC2;
+    border: none;
+    border-radius: 10px;
+    color: #F0EBA2;
+    cursor: pointer;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+}
+
+.active {
+    background-color: #561356;
+}

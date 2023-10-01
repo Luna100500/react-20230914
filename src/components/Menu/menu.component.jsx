@@ -1,4 +1,4 @@
-import { Dish } from "../Dish/component";
+import { Dish } from "../Dish/dish.component";
 
 export const Menu = ({ dishes }) => {
     return (
