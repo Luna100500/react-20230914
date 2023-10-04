@@ -3,11 +3,11 @@ import { Reviews } from "../Reviews/reviews.component"
 import styles from "./styles.module.css";
 import classNames from 'classnames';
 
-export const RestaurantComponent = ({ restaurantProp }) => {
+export const RestaurantComponent = ({ restaurantProp, className }) => {
     console.log(restaurantProp)
     return (
         <div className={classNames(
-            styles.restaurant)}>
+            styles.restaurant, className)}>
             <h2>{restaurantProp?.name}</h2>
             <h3>Меню</h3>
             <Menu dishes={restaurantProp?.menu} />
