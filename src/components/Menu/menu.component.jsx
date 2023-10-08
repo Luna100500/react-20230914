@@ -6,7 +6,8 @@ import { Dish } from "../Dish/dish.component";
 export const Menu = ({ dishes }) => {
     console.log(styles.button)
     return (
-        <ul>
+        <ul className={classNames(
+            styles.dishesList)}>
             {dishes?.map((dish) => (
                 <li key={dish.id}>
                     <Dish
