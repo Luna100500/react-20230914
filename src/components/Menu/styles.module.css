@@ -1,0 +1,9 @@
+.button {
+    margin: 5px;
+}
+
+.dishesList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

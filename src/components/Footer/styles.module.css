@@ -1,0 +1,12 @@
+.footer {
+    width: 100%;
+    background-color:#43751A;
+    min-height: 50px;
+    display: flex;
+}
+
+.footer h3 {
+    color: #E1D95D;
+    font-family: "Courier New", Courier, monospace;
+    margin-left: 40px;
+}
