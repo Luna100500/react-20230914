@@ -1,0 +1,33 @@
+.default {
+display: flex;
+padding: 5px;
+background-color: #561356;
+border: 1px solid #561356;
+border-radius: 5px;
+margin-left: 50px;
+color: #E1D95D;
+font-size: 16px;
+font-family: "Courier New", Courier, monospace;
+cursor: pointer;
+
+&:hover {
+    opacity: 0.7;
+}
+}
+
+.dark {
+    display: flex;
+    padding: 5px;
+    background-color: red;
+    border: 1px solid #561356;
+    border-radius: 5px;
+    margin-left: 50px;
+    color: #E1D95D;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+    }
