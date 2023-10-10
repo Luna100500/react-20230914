@@ -4,8 +4,8 @@ import { RestaurantTabs } from "../../components/RestaurantTabs/restaurantTabs.c
 import { Header } from "../../components/Header/header.component";
 import { Footer } from "../../components/Footer/footer.component";
 import { restaurants } from "../../constants/mock";
+import { ReviewForm } from "../../components/ReviewForm/reviewForm.component";
 import styles from "./styles.module.css";
-import classNames from 'classnames';
 
 export const Main = () => {
     const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0);
@@ -23,6 +23,7 @@ export const Main = () => {
                 <RestaurantComponent
                     className={styles.restaurant}
                     restaurantProp={restaurants[activeRestaurantIndex]} />
+                <ReviewForm />
             </div>
             <Footer />
         </div>
