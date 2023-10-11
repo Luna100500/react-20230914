@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import classNames from 'classnames';
-import { ThemeButton } from "../../components/ThemeButton/themeButton.component";
+import { Button } from "../../components/Button/button.component";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/Theme";
 
@@ -10,7 +10,8 @@ export const Header = () => {
         <header className={classNames(
             styles.header)}>
             <h1>Смотри не лопни DELIVERY</h1>
-            <ThemeButton onClick={toggleTheme}>Сменить тему</ThemeButton>
+            <Button size="s" className={classNames(
+                styles.buttonTheme)} onClick={toggleTheme}>Change theme</Button>
         </header>
     )
 }
