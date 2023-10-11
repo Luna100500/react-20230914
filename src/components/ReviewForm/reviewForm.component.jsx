@@ -1,8 +1,7 @@
 import { useReducer } from "react";
 import styles from "./styles.module.css";
 import classNames from 'classnames';
-
-// import { UserContext } from "../../contexts/User";
+import { Button } from "../../components/Button/button.component";
 
 const DEFAULT_VALUE = {
     name: "",
@@ -28,22 +27,21 @@ const reducer = (state, action) => {
 export const ReviewForm = () => {
 
     const [formValue, dispatch] = useReducer(reducer, DEFAULT_VALUE);
-    // const { user, setUser } = useContext(UserContext);
 
     return <div className={styles.formContainer}>
         <form>
 
             <fieldset className={styles.formField}>
-                <legend className={styles.formLegend}>Добавить отзыв</legend>
+                <legend className={styles.formLegend}>ADD REVIEW</legend>
                 <label className={styles.formLabel}>
-                    Имя:
+                    NAME:
                     <input className={styles.formInput}
                         value={formValue.name} onChange={(event) => {
                             dispatch({ type: "setName", payload: event.target.value });
                         }} />
                 </label>
                 <label className={styles.formLabel}>
-                    Ваш отзыв:
+                    YOUR REVIEW:
                     <input className={styles.formInput}
                         value={formValue.review}
                         onChange={(event) => {
@@ -52,9 +50,10 @@ export const ReviewForm = () => {
                 </label>
             </fieldset>
         </form>
-        <button className={styles.formButton}
+        <Button
+            size="m"
             onClick={() => dispatch({ type: "reset" })}>
-            ОТПРАВИТЬ ОТЗЫВ
-        </button>
+            SEND REVIEW
+        </Button>
     </div>
 }

@@ -1,24 +1,21 @@
 import { useState } from "react";
-import styles from "./styles.module.css";
-import classNames from 'classnames';
+import { Button } from "../../components/Button/button.component";
 
-export const Dish = ({ dish, className }) => {
+export const Dish = ({ dish }) => {
     const [amount, setAmount] = useState(0);
 
     return (
-        < div >
-            {dish.name}
-            <button className={classNames(
-                styles.button, className, { [styles.disabled]: amount <= 0 }
-            )} disabled={amount <= 0} onClick={() => setAmount(amount - 1)}>
+
+        <div>
+            <span>{dish.name}</span>
+            <Button size="s" onClick={() => setAmount(amount - 1)} disabled={amount <= 0}>
                 -
-            </button>
+            </Button>
             <span>{amount}</span>
-            <button className={classNames(
-                styles.button, className, { [styles.disabled]: amount >= 5 }
-            )} disabled={amount >= 5} onClick={() => setAmount(amount + 1)}>
+            <Button size="s" onClick={() => setAmount(amount + 1)} disabled={amount >= 5}>
                 +
-            </button>
-        </div >
+            </Button>
+        </div>
+
     )
 };

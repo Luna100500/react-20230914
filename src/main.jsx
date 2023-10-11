@@ -9,11 +9,13 @@ const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(
-    <ThemeProvider>
-        <div className="root">
-            <Main />
-        </div>
-    </ThemeProvider>
+    <React.StrictMode>
+        <ThemeProvider>
+            <div className="root">
+                <Main />
+            </div>
+        </ThemeProvider>
+    </React.StrictMode>
 );
 
 

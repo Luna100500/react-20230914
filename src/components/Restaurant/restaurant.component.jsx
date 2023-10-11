@@ -9,9 +9,9 @@ export const RestaurantComponent = ({ restaurantProp, className }) => {
         <div className={classNames(
             styles.restaurant, className)}>
             <h2>{restaurantProp?.name}</h2>
-            <h3>Меню</h3>
+            <h3>MENU</h3>
             <Menu dishes={restaurantProp?.menu} />
-            <h3>Отзывы</h3>
+            <h3>REVIEW</h3>
             <Reviews reviews={restaurantProp?.reviews} />
         </div>
     );

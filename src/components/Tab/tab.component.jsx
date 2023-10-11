@@ -1,9 +1,14 @@
-import styles from "./styles.module.css";
-import classNames from 'classnames';
+import { Button } from "../Button/button.component";
 
-export const Tab = ({ title, active, onClick, className }) => {
-    return <button className={classNames(
-        styles.navigationButton, className, { [styles.active]: active }
-    )}
-        onClick={onClick}>{title}</button>
-}
+export const Tab = ({ onClick, title, isActive, className }) => {
+    return (
+        <Button
+            onClick={onClick}
+            size="l"
+            viewVariant={isActive ? "accent" : "base"}
+            className={className}
+        >
+            {title}
+        </Button>
+    );
+};
